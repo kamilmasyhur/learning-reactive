@@ -3,6 +3,7 @@ package com.bootcamp.learningreactive.executors.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.bootcamp.learningreactive.executors.AppExecutors
 import com.bootcamp.learningreactive.executors.Callback
 import com.bootcamp.learningreactive.executors.domain.MainUseCase
 import com.bootcamp.learningreactive.model.WeatherResponse
@@ -18,13 +19,17 @@ class MainViewModel(
         _state.value = MainState.ShowLoading
         useCase.getWeather(cityName, object : Callback {
             override fun onSuccess(weatherResponse: WeatherResponse) {
-                _state.value = MainState.DismissLoading
-                _state.value = MainState.LoadSuccess(weatherResponse)
+                AppExecutors.xMain(Runnable {
+                    _state.value = MainState.DismissLoading
+                    _state.value = MainState.LoadSuccess(weatherResponse)
+                })
             }
 
             override fun onFailure(throwable: Throwable) {
-                _state.value = MainState.DismissLoading
-                _state.value = MainState.LoadFailed
+                AppExecutors.xMain(Runnable {
+                    _state.value = MainState.DismissLoading
+                    _state.value = MainState.LoadFailed
+                })
             }
         })
     }
