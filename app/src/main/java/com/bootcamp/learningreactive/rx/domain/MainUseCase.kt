@@ -1,7 +1,7 @@
-package com.bootcamp.learningreactive.domain
+package com.bootcamp.learningreactive.rx.domain
 
-import com.bootcamp.learningreactive.data.MainRepository
 import com.bootcamp.learningreactive.model.WeatherResponse
+import com.bootcamp.learningreactive.rx.data.MainRepository
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

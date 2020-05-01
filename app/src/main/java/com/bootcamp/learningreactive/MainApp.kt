@@ -1,7 +1,7 @@
 package com.bootcamp.learningreactive
 
 import android.app.Application
-import com.bootcamp.learningreactive.data.OpenWeatherService
+import com.bootcamp.learningreactive.service.OpenWeatherService
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory

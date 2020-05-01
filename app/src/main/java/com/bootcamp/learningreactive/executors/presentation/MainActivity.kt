@@ -1,4 +1,4 @@
-package com.bootcamp.learningreactive.presentation
+package com.bootcamp.learningreactive.executors.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.bootcamp.learningreactive.MainApp
 import com.bootcamp.learningreactive.R
-import com.bootcamp.learningreactive.data.MainRepositoryImpl
-import com.bootcamp.learningreactive.domain.MainUseCaseImpl
+import com.bootcamp.learningreactive.executors.data.MainRepositoryImpl
+import com.bootcamp.learningreactive.executors.domain.MainUseCaseImpl
 import com.bootcamp.learningreactive.model.WeatherResponse
 import kotlinx.android.synthetic.main.activity_main.*
 

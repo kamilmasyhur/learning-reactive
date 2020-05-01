@@ -1,9 +1,9 @@
-package com.bootcamp.learningreactive.presentation
+package com.bootcamp.learningreactive.rx.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.bootcamp.learningreactive.domain.MainUseCase
+import com.bootcamp.learningreactive.rx.domain.MainUseCase
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
